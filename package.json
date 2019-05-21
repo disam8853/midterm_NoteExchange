@@ -2,11 +2,11 @@
   "name": "backend",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js",
-    "heroku-postbuild": "npm install --only=dev && npm install && npm run build"
+    "start": "concurrently \"nodemon ./server.js\" \"cd client && npm start\"",
+    "heroku-postbuild": "npm install --only=dev && cd client && npm install && npm run build"
   },
   "keywords": [],
   "author": "",
