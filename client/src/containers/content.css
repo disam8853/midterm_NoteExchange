@@ -1,0 +1,22 @@
+.cate {
+  cursor: pointer;
+}
+
+#content {
+  border: 3px solid #6ad1f7;
+  position: relative;
+  border-radius: 30px;
+  padding: 1rem;
+  background-color: #fafbfd;
+}
+
+#content::before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  bottom: 5px;
+  left: 5px;
+  right: 5px;
+  border: 3px solid #6ad1f7;
+  border-radius: 20px;
+}
