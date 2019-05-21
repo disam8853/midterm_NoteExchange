@@ -11,7 +11,7 @@ class CreatePost extends React.Component {
 		};
 	}
 
-  componentWillMount() {
+  componentDidMount() {
     axios.get('/note/'+this.props.match.params.post_id)
         .then(res => {
           this.setState({
@@ -51,7 +51,7 @@ class CreatePost extends React.Component {
       <div id='CreatePost'>
       	<div className='row'>
       		<h1 className='mx-auto'>
-	      		Create a new note:
+	      		Update a new note:
 	      	</h1>
       	</div>
 
