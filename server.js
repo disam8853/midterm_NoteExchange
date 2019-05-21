@@ -10,6 +10,8 @@ const PORT = process.env.PORT || 4000;
 app.use(cors());
 app.use(bodyParser.json());
 
+app.use(express.static(path.join(__dirname, "./client/build")));
+
 mongoose.connect('mongodb+srv://admin:admin@cluster0-hw6no.gcp.mongodb.net/test?retryWrites=true', { useNewUrlParser: true });
 const connection = mongoose.connection;
 connection.once('open', function() {
@@ -77,10 +79,3 @@ app.delete('/note/:id',function (req,res,next) {
 		}
 	})
 });
-
-// Serve static files from the React frontend app
-app.use(express.static(path.join(__dirname, '/client/public')))
-// Anything that doesn't match the above, send back index.html
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname + '/client/public/index.html'))
-})
