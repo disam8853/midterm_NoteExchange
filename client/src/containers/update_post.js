@@ -51,7 +51,7 @@ class CreatePost extends React.Component {
       <div id='CreatePost'>
       	<div className='row'>
       		<h1 className='mx-auto'>
-	      		Update a new note:
+	      		Update a note:
 	      	</h1>
       	</div>
 

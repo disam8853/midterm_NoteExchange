@@ -13,7 +13,7 @@ class CreatePost extends React.Component {
 			subj: subj
 		}
 
-		axios.post('http://localhost:4000/note', newNote)
+		axios.post('/note', newNote)
 					.then(res => console.log(res.data));
 	}
 
